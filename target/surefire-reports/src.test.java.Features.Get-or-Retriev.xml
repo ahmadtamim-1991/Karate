@@ -1,0 +1,13 @@
+<testsuite failures="0" name="src/test/java/Features/Get-or-Retriev.feature" skipped="0" tests="1" time="2.30584">
+  <testcase classname="src.test.java.Features.Get-or-Retriev" name="this will Get or retriev our data from database" time="2.30584">
+    <system-out>Given url 'https://jobapplicationjwt.herokuapp.com/' ...................... passed
+And def Token = call read('GenerateToken.feature') ........................ passed
+Given path 'auth/webapi/find' ............................................. passed
+And param id = 505 ........................................................ passed
+And param jobTitle = 'programmer' ......................................... passed
+And headers {Authorization: '#("Bearer " + Token.token)'} ................. passed
+When method Get ........................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed</system-out>
+  </testcase>
+</testsuite>

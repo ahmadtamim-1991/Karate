@@ -1,0 +1,33 @@
+<testsuite failures="0" name="src/test/java/Features/End2End.feature" skipped="0" tests="1" time="2.711776">
+  <testcase classname="src.test.java.Features.End2End" name="this scenario will create or add a new job description to the database" time="2.711776">
+    <system-out>Given url 'https://jobapplicationjwt.herokuapp.com/' ...................... passed
+And def Token = call read('GenerateToken.feature') ........................ passed
+Given path 'auth/webapi/add' .............................................. passed
+And headers {Authorization: '#("Bearer " + Token.token)'} ................. passed
+When request read('requestBody/PostBody.json') ............................ passed
+And method Post ........................................................... passed
+Then status 201 ........................................................... passed
+And print response ........................................................ passed
+And def Id = response.jobId ............................................... passed
+And def jobT = response.jobTitle .......................................... passed
+And print Id .............................................................. passed
+Given path 'auth/webapi/find' ............................................. passed
+And param id = Id ......................................................... passed
+And param jobTitle = jobT ................................................. passed
+And headers {Authorization: '#("Bearer " + Token.token)'} ................. passed
+When method Get ........................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+Given path 'auth/webapi/update' ........................................... passed
+And request ............................................................... passed
+And headers {Accept: 'application/json', Content-Type: 'application/json', Authorization: '#("Bearer " + Token.token)'} . passed
+When method Put ........................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+Given path 'auth/webapi/remove/' + Id ..................................... passed
+And headers {Authorization: '#("Bearer " + Token.token)'} ................. passed
+When method Delete ........................................................ passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed</system-out>
+  </testcase>
+</testsuite>

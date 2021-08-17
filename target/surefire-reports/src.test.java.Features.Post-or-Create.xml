@@ -1,0 +1,23 @@
+<testsuite failures="1" name="src/test/java/Features/Post-or-Create.feature" skipped="0" tests="1" time="2.022602">
+  <testcase classname="src.test.java.Features.Post-or-Create" name="this scenario will create or add a new job description to the database" time="2.022602">
+    <failure message="Post-or-Create.feature:18 - javascript evaluation failed: deep {&quot;projectName&quot;: &quot;Software&quot;}, &lt;eval&gt;:1:5 Expected ; but found {&#13;&#10;deep {&quot;projectName&quot;: &quot;Software&quot;}&#13;&#10;     ^ in &lt;eval&gt; at line number 1 at column number 5">Given url 'https://jobapplicationjwt.herokuapp.com/' ...................... passed
+And def Token = call read('GenerateToken.feature') ........................ passed
+Given path 'auth/webapi/add' .............................................. passed
+And headers {Authorization: '#("Bearer " + Token.token)'} ................. passed
+When request {"experience": ["not much"],"jobDescription": "program new software","jobId": 505,"jobTitle": "programmer","project": [{"projectName": "Software","technology": ["IT"]}]} . passed
+And method Post ........................................................... passed
+Then status 201 ........................................................... passed
+And match response.jobTitle == 'programmer' ............................... passed
+And match response.experience[0] == 'not much' ............................ passed
+And match response.project[0].technology[0] == 'IT' ....................... passed
+And match response contains deep {"projectName": "Software"} .............. failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: Post-or-Create.feature:18 - javascript evaluation failed: deep {"projectName": "Software"}, &lt;eval&gt;:1:5 Expected ; but found {&#13;
+deep {"projectName": "Software"}&#13;
+     ^ in &lt;eval&gt; at line number 1 at column number 5&#13;
+	at ✽.And match response contains deep {"projectName": "Software"} (Post-or-Create.feature:18)&#13;
+
+And print response ........................................................ skipped</failure>
+  </testcase>
+</testsuite>

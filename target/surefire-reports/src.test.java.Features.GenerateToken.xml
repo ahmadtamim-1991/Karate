@@ -1,0 +1,22 @@
+<testsuite failures="0" name="src/test/java/Features/GenerateToken.feature" skipped="0" tests="2" time="1.621154">
+  <testcase classname="src.test.java.Features.GenerateToken" name="This scenario will register our credentials to the server" time="1.260305">
+    <system-out>Given url 'https://jobapplicationjwt.herokuapp.com/' ...................... passed
+Given path 'users/sign-up' ................................................ passed
+When request {"id": 0,"password": "ahmad","username": "mia"} .............. passed
+And method Post ........................................................... passed
+Then status 200 ........................................................... passed</system-out>
+  </testcase>
+  <testcase classname="src.test.java.Features.GenerateToken" name="This scenario will create our Authorization token using our username and password" time="0.360849">
+    <system-out>Given url 'https://jobapplicationjwt.herokuapp.com/' ...................... passed
+Given path 'users/sign-up' ................................................ passed
+When request {"id": 0,"password": "ahmad","username": "mia"} .............. passed
+And method Post ........................................................... passed
+Then status 200 ........................................................... passed
+Given url 'https://jobapplicationjwt.herokuapp.com/' ...................... passed
+Given path 'users/authenticate' ........................................... passed
+When request {"password": "ahmad","username": "mia"} ...................... passed
+And method Post ........................................................... passed
+Then status 200 ........................................................... passed
+And print response.token .................................................. passed</system-out>
+  </testcase>
+</testsuite>

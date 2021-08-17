@@ -1,0 +1,238 @@
+16:48:14.206 karate.env system property was:  
+16:48:15.322 request:
+1 > POST https://jobapplicationjwt.herokuapp.com/users/sign-up
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 44
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: jobapplicationjwt.herokuapp.com
+1 > User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_271)
+{"id":0,"password":"ahmad","username":"mia"}
+
+16:48:15.763 response time in milliseconds: 436.83
+1 < 200
+1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 < Connection: keep-alive
+1 < Content-Length: 25
+1 < Content-Type: application/json
+1 < Date: Tue, 17 Aug 2021 20:48:15 GMT
+1 < Expires: 0
+1 < Pragma: no-cache
+1 < Server: Cowboy
+1 < Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+1 < Via: 1.1 vegur
+1 < X-Content-Type-Options: nosniff
+1 < X-Frame-Options: DENY
+1 < X-Xss-Protection: 1; mode=block
+mia register successfully
+
+16:48:15.801 request:
+1 > POST https://jobapplicationjwt.herokuapp.com/users/authenticate
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 37
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: jobapplicationjwt.herokuapp.com
+1 > User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_271)
+{"password":"ahmad","username":"mia"}
+
+16:48:16.039 response time in milliseconds: 232.63
+1 < 200
+1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 < Connection: keep-alive
+1 < Content-Type: application/json
+1 < Date: Tue, 17 Aug 2021 20:48:15 GMT
+1 < Expires: 0
+1 < Pragma: no-cache
+1 < Server: Cowboy
+1 < Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+1 < Transfer-Encoding: chunked
+1 < Vary: [Origin, Access-Control-Request-Method, Access-Control-Request-Headers]
+1 < Via: 1.1 vegur
+1 < X-Content-Type-Options: nosniff
+1 < X-Frame-Options: DENY
+1 < X-Xss-Protection: 1; mode=block
+{"token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtaWEiLCJleHAiOjE2MjkyNDA0OTYsImlhdCI6MTYyOTIzMzI5Nn0.Pwob62FFMzfEFmyRkMpS0JSWfsdqZN4R-xJmWkVifHBpwDcCQRloQyg4s6RdK3CdxG12Qratqt8Jr2ti1AbdlQ"}
+
+16:48:16.065 [print] eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtaWEiLCJleHAiOjE2MjkyNDA0OTYsImlhdCI6MTYyOTIzMzI5Nn0.Pwob62FFMzfEFmyRkMpS0JSWfsdqZN4R-xJmWkVifHBpwDcCQRloQyg4s6RdK3CdxG12Qratqt8Jr2ti1AbdlQ
+16:48:16.108 request:
+1 > POST https://jobapplicationjwt.herokuapp.com/auth/webapi/add
+1 > Accept-Encoding: gzip,deflate
+1 > Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtaWEiLCJleHAiOjE2MjkyNDA0OTYsImlhdCI6MTYyOTIzMzI5Nn0.Pwob62FFMzfEFmyRkMpS0JSWfsdqZN4R-xJmWkVifHBpwDcCQRloQyg4s6RdK3CdxG12Qratqt8Jr2ti1AbdlQ
+1 > Connection: Keep-Alive
+1 > Content-Length: 162
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: jobapplicationjwt.herokuapp.com
+1 > User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_271)
+{"experience":["not much"],"jobDescription":"program new software","jobId":505,"jobTitle":"programmer","project":[{"projectName":"Software","technology":["IT"]}]}
+
+16:48:16.275 response time in milliseconds: 153.36
+1 < 201
+1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 < Connection: keep-alive
+1 < Content-Type: application/json
+1 < Date: Tue, 17 Aug 2021 20:48:15 GMT
+1 < Expires: 0
+1 < Pragma: no-cache
+1 < Server: Cowboy
+1 < Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+1 < Transfer-Encoding: chunked
+1 < Via: 1.1 vegur
+1 < X-Content-Type-Options: nosniff
+1 < X-Frame-Options: DENY
+1 < X-Xss-Protection: 1; mode=block
+{"jobId":505,"jobTitle":"programmer","jobDescription":"program new software","experience":["not much"],"project":[{"projectName":"Software","technology":["IT"]}]}
+
+4:46.334 [print] {
+  "jobId": 505,
+  "jobTitle": "programmer",
+  "project": [
+    {
+      "technology": [
+        "IT"
+      ],
+      "projectName": "string"
+    }
+  ],
+  "jobDescription": "program new software",
+  "experience": [
+    "not much"
+  ]
+}
+
+escription=program new softwareeeeee",
+  "experience": [
+    "not much"
+  ]
+}
+
+
+2 > GET https://jobapplicationjwt.herokuapp.com/auth/webapi/find?id=506&jobTitle=Carpenter
+2 > Accept-Encoding: gzip,deflate
+2 > Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtaWEiLCJleHAiOjE2MjkyMzYwMjUsImlhdCI6MTYyOTIyODgyNX0._b4UcUMeSIYp6tiYKuzoL88FNj6Qz5KWjJjWEvpYWmGNAyf1hxx1A81R_dPIFiJHF8pLYDmYmwupkeEAQOnKbg
+2 > Connection: Keep-Alive
+2 > Host: jobapplicationjwt.herokuapp.com
+2 > User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_271)
+
+15:33:46.129 response time in milliseconds: 160.62
+2 < 200
+2 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+2 < Connection: keep-alive
+2 < Content-Type: application/json
+2 < Date: Tue, 17 Aug 2021 19:33:45 GMT
+2 < Expires: 0
+2 < Pragma: no-cache
+2 < Server: Cowboy
+2 < Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+2 < Transfer-Encoding: chunked
+2 < Via: 1.1 vegur
+2 < X-Content-Type-Options: nosniff
+2 < X-Frame-Options: DENY
+2 < X-Xss-Protection: 1; mode=block
+{"jobId":506,"jobTitle":"Carpenter","jobDescription":"He creates tables and chairs","experience":["Alot"],"project":[{"projectName":"Constraction","technology":["None"]}]}
+
+15:33:46.131 [print] {
+  "jobId": 506,
+  "jobTitle": "Carpenter",
+  "project": [
+    {
+      "technology": [
+        "None"
+      ],
+      "projectName": "Constraction"
+    }
+  ],
+  "jobDescription": "He creates tables and chairs",
+  "experience": [
+    "Alot"
+  ]
+}
+
+15:33:46.153 request:
+3 > PUT https://jobapplicationjwt.herokuapp.com/auth/webapi/update
+3 > Accept: application/json
+3 > Accept-Encoding: gzip,deflate
+3 > Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtaWEiLCJleHAiOjE2MjkyMzYwMjUsImlhdCI6MTYyOTIyODgyNX0._b4UcUMeSIYp6tiYKuzoL88FNj6Qz5KWjJjWEvpYWmGNAyf1hxx1A81R_dPIFiJHF8pLYDmYmwupkeEAQOnKbg
+3 > Connection: Keep-Alive
+3 > Content-Length: 176
+3 > Content-Type: application/json; charset=UTF-8
+3 > Host: jobapplicationjwt.herokuapp.com
+3 > User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_271)
+{"experience":["Very Experienced"],"jobDescription":"program new softwareeeeee","jobId":506,"jobTitle":"programmer","project":[{"projectName":"TekSchool","technology":["IT"]}]}
+
+15:33:46.326 response time in milliseconds: 171.78
+3 < 200
+3 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+3 < Connection: keep-alive
+3 < Content-Type: application/json
+3 < Date: Tue, 17 Aug 2021 19:33:46 GMT
+3 < Expires: 0
+3 < Pragma: no-cache
+3 < Server: Cowboy
+3 < Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+3 < Transfer-Encoding: chunked
+3 < Via: 1.1 vegur
+3 < X-Content-Type-Options: nosniff
+3 < X-Frame-Options: DENY
+3 < X-Xss-Protection: 1; mode=block
+{"jobId":506,"jobTitle":"programmer","jobDescription":"program new softwareeeeee","experience":["Very Experienced"],"project":[{"projectName":"TekSchool","technology":["IT"]}]}
+
+15:33:46.328 [print] {
+  "jobId": 506,
+  "jobTitle": "programmer",
+  "project": [
+    {
+      "technology": [
+        "IT"
+      ],
+      "projectName": "TekSchool"
+    }
+  ],
+  "jobDescription": "program new softwareeeeee",
+  "experience": [
+    "Very Experienced"
+  ]
+}
+
+15:33:46.341 request:
+4 > DELETE https://jobapplicationjwt.herokuapp.com/auth/webapi/remove/506
+4 > Accept-Encoding: gzip,deflate
+4 > Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtaWEiLCJleHAiOjE2MjkyMzYwMjUsImlhdCI6MTYyOTIyODgyNX0._b4UcUMeSIYp6tiYKuzoL88FNj6Qz5KWjJjWEvpYWmGNAyf1hxx1A81R_dPIFiJHF8pLYDmYmwupkeEAQOnKbg
+4 > Connection: Keep-Alive
+4 > Host: jobapplicationjwt.herokuapp.com
+4 > User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_271)
+
+15:33:46.516 response time in milliseconds: 158.79
+4 < 200
+4 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+4 < Connection: keep-alive
+4 < Content-Type: application/json
+4 < Date: Tue, 17 Aug 2021 19:33:46 GMT
+4 < Expires: 0
+4 < Pragma: no-cache
+4 < Server: Cowboy
+4 < Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+4 < Transfer-Encoding: chunked
+4 < Via: 1.1 vegur
+4 < X-Content-Type-Options: nosniff
+4 < X-Frame-Options: DENY
+4 < X-Xss-Protection: 1; mode=block
+{"jobId":506,"jobTitle":"programmer","jobDescription":"program new softwareeeeee","experience":["Very Experienced"],"project":[{"projectName":"TekSchool","technology":["IT"]}]}
+
+15:33:46.517 [print] {
+  "jobId": 506,
+  "jobTitle": "programmer",
+  "project": [
+    {
+      "technology": [
+        "IT"
+      ],
+      "projectName": "TekSchool"
+    }
+  ],
+  "jobDescription": "program new softwareeeeee",
+  "experience": [
+    "Very Experienced"
+  ]
+}
+
